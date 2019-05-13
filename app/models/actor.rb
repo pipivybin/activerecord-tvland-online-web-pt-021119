@@ -7,16 +7,9 @@ def full_name
 end
 
 def list_roles
-  d = []
   self.characters.collect do |x|
-    a = x.name
-    b = x.show.name
-    c = []
-    c << a
-    c << b
-    d << c.join(" - ")
+    x.name + " - " + x.show.name
   end
-  d
 end
 
 end
